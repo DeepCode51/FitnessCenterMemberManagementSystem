@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.spring.dao.KehuMapper">
+    <resultMap id="BaseResultMap" type="com.spring.entity.Kehu">
+        <id column="id" property="id" jdbcType="INTEGER"/>
+                            <result column="zhanghao" property="zhanghao" jdbcType="VARCHAR"/>
+                                    <result column="mima" property="mima" jdbcType="VARCHAR"/>
+                                    <result column="xingming" property="xingming" jdbcType="VARCHAR"/>
+                                    <result column="xingbie" property="xingbie" jdbcType="VARCHAR"/>
+                                    <result column="lianxidianhua" property="lianxidianhua" jdbcType="VARCHAR"/>
+                                    <result column="youxiang" property="youxiang" jdbcType="VARCHAR"/>
+                                    <result column="beizhu" property="beizhu" jdbcType="VARCHAR"/>
+                                
+    </resultMap>
+    <sql id="Base_Column_List">
+        id, zhanghao, mima, xingming, xingbie, lianxidianhua, youxiang, beizhu    </sql>
+        <select id="login" resultMap="BaseResultMap" parameterType="com.spring.entity.Kehu">
+        select
+        <include refid="Base_Column_List"/>
+        from kehu        where zhanghao = #{zhanghao}
+        AND mima = #{mima}
+    </select>
+    </mapper>

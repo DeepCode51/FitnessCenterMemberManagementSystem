@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.spring.dao.HuiyuankaMapper">
+    <resultMap id="BaseResultMap" type="com.spring.entity.Huiyuanka">
+        <id column="id" property="id" jdbcType="INTEGER"/>
+                            <result column="kehuid" property="kehuid" jdbcType="INTEGER"/>
+                                    <result column="zhanghao" property="zhanghao" jdbcType="VARCHAR"/>
+                                    <result column="xingming" property="xingming" jdbcType="VARCHAR"/>
+                                    <result column="huiyuankahao" property="huiyuankahao" jdbcType="VARCHAR"/>
+                                    <result column="kayue" property="kayue" jdbcType="DECIMAL"/>
+                                    <result column="youxiaoriqi" property="youxiaoriqi" jdbcType="VARCHAR"/>
+                                
+    </resultMap>
+    <sql id="Base_Column_List">
+        id, kehuid, zhanghao, xingming, huiyuankahao, kayue, youxiaoriqi    </sql>
+    </mapper>

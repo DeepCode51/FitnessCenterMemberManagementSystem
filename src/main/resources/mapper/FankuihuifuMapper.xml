@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.spring.dao.FankuihuifuMapper">
+    <resultMap id="BaseResultMap" type="com.spring.entity.Fankuihuifu">
+        <id column="id" property="id" jdbcType="INTEGER"/>
+                            <result column="liuyanfankuiid" property="liuyanfankuiid" jdbcType="INTEGER"/>
+                                    <result column="liuyanren" property="liuyanren" jdbcType="VARCHAR"/>
+                                    <result column="huifuneirong" property="huifuneirong" jdbcType="VARCHAR"/>
+                                    <result column="huifuren" property="huifuren" jdbcType="VARCHAR"/>
+                                    <result column="huifuriqi" property="huifuriqi" jdbcType="VARCHAR"/>
+                                
+    </resultMap>
+    <sql id="Base_Column_List">
+        id, liuyanfankuiid, liuyanren, huifuneirong, huifuren, huifuriqi    </sql>
+    </mapper>
